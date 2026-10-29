@@ -1,7 +1,12 @@
 # Utilidades del curso de Radiobiología
 
-`tp_utils.py` envuelve la carga de las tablas y el arranque de `ion_track_mc` para los trabajos
-prácticos del curso (UNR). Los notebooks guiados lo descargan desde esta carpeta.
+Archivos de los trabajos prácticos del curso *Interacción radiación–materia. Aplicación a la radiobiología* (UNR):
 
-La copia de trabajo está en el material del curso (`Trabajos practicos/codigo/tp_utils.py`);
-`generar_notebooks.py` la copia acá cada vez que regenera los notebooks. No editar este archivo.
+| Archivo | Para qué |
+|---|---|
+| `tp_utils.py` | Carga de las tablas y arranque de `ion_track_mc`, y funciones de los notebooks guiados |
+| `mc_fotones.py` | Monte Carlo de fotones completo (TP4-A, versión básica) |
+| `esqueleto_tp4a.py` | Esqueleto del Monte Carlo de fotones para completar (TP4-A, versiones avanzada y media) |
+| `verificar_instalacion.py` | Comprueba que la instalación sirve para todos los TP |
+
+Las copias de trabajo están en el material del curso (`Trabajos practicos/codigo/`); el generador de los notebooks las copia acá. No editar estos archivos.

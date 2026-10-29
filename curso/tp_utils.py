@@ -265,3 +265,62 @@ def dosis_para_supervivencia(alfa, beta, S=0.1):
     if abs(beta) < 1e-12:
         return L / alfa
     return (-alfa + np.sqrt(alfa ** 2 + 4 * beta * L)) / (2 * beta)
+
+
+# ---------------------------------------------------------------------------
+# Rótulos en español para los gráficos de ion_track_mc.analysis.visualization
+# ---------------------------------------------------------------------------
+
+_TRADUCCION = {
+    "Energy [eV]": "Energía [eV]",
+    "Depth [nm]": "Profundidad [nm]",
+    "Dose [Gy]": "Dosis [Gy]",
+    "Bragg curve": "Curva de Bragg",
+    "Radial distance [nm]": "Distancia radial [nm]",
+    "Radial dose": "Dosis radial",
+    "Depth z [nm]": "Profundidad z [nm]",
+    "Transverse x [nm]": "Transversal x [nm]",
+    "Simulated track": "Traza simulada",
+    "Analytic": "Analítico",
+    "Monte Carlo (emergent)": "Monte Carlo (emergente)",
+    "e- (deposit)": "e⁻ (depósito)",
+    "H1+": "H⁺",
+    "H0": "H⁰",
+    "ionization": "ionización",
+    "excitation": "excitación",
+    "capture": "captura",
+    "loss": "pérdida",
+    "elastic": "elástica",
+}
+
+
+def _traducir(texto):
+    import re
+    if texto in _TRADUCCION:
+        return _TRADUCCION[texto]
+    m = re.fullmatch(r"(Cross sections|Mean free path), q=(\d)", texto)
+    if m:
+        return {"Cross sections": "Secciones eficaces", "Mean free path": "Recorrido libre medio"}[m.group(1)] + f", q = {m.group(2)}"
+    return texto
+
+
+def en_espanol(fig=None):
+    """Traduce al español los rótulos de los ejes, los títulos y las leyendas de
+    los gráficos de ion_track_mc (plot_track, plot_bragg_curve, plot_cross_sections,
+    plot_mean_free_path, plot_radial_dose). Llamarla después de graficar:
+
+        plot_track(entrada, motor); en_espanol(); plt.show()
+
+    Sin argumento actúa sobre la figura actual.
+    """
+    import matplotlib.pyplot as plt
+    fig = fig or plt.gcf()
+    for ax in fig.get_axes():
+        ax.set_xlabel(_traducir(ax.get_xlabel()))
+        ax.set_ylabel(_traducir(ax.get_ylabel()))
+        ax.set_title(_traducir(ax.get_title()))
+        ley = ax.get_legend()
+        if ley is not None:
+            for t in ley.get_texts():
+                t.set_text(_traducir(t.get_text()))
+    return fig

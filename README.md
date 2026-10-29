@@ -3,7 +3,7 @@
 [![tests](https://github.com/juanmontiz/ion-track-mc/actions/workflows/tests.yml/badge.svg)](https://github.com/juanmontiz/ion-track-mc/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Python ≥ 3.10](https://img.shields.io/badge/python-%E2%89%A5%203.10-blue)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/juanmontiz/ion-track-mc/blob/main/notebooks/03_track_visualization.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](#the-notebooks)
 
 An educational, event-by-event Monte Carlo code that simulates the
 **track of a proton in liquid water**, one collision at a time, and turns
@@ -58,8 +58,8 @@ an electron. Made with
 
 ## Quick start
 
-**In the browser, nothing to install.** Open a notebook in Google Colab
-with the badge above or the links in [The notebooks](#the-notebooks). Its
+**In the browser, nothing to install.** Open any of the three notebooks in
+Google Colab with its badge in [The notebooks](#the-notebooks). Its
 first cell downloads the repository and installs the package.
 
 **On your computer**, with Python ≥ 3.10:
@@ -344,11 +344,11 @@ Open them with `.venv/bin/jupyter lab` and choose the
 `notebooks/output_01/`, `output_02/` and `output_03/`; these folders are
 recreated on every run.
 
-| Notebook | What you learn | Run time* |
-|---|---|---|
-| 01 — Full pipeline walkthrough ([open](notebooks/01_full_pipeline_walkthrough.ipynb) · [Colab](https://colab.research.google.com/github/juanmontiz/ion-track-mc/blob/main/notebooks/01_full_pipeline_walkthrough.ipynb)) | The whole chain on single tracks: cross sections and mean free path, one proton's track, stopping power (Monte Carlo vs analytic, vs NIST PSTAR, vs experiment), charge-state equilibrium, a Bragg curve, and how LET depends on the scale it is measured at. | ~4 min |
-| 02 — Beam simulation ([open](notebooks/02_beam_simulation.ipynb) · [Colab](https://colab.research.google.com/github/juanmontiz/ion-track-mc/blob/main/notebooks/02_beam_simulation.ipynb)) | A beam of 500 protons at 200 keV/u with a 5% energy spread: beam Bragg curve and radial dose, pencil-beam and broad-beam dose maps, energy-loss spread between protons, beam-averaged LET. | ~14 min |
-| 03 — Track visualization ([open](notebooks/03_track_visualization.ipynb) · [Colab](https://colab.research.google.com/github/juanmontiz/ion-track-mc/blob/main/notebooks/03_track_visualization.ipynb)) | What a track looks like, collision by collision, at low (15 keV/u) and high (500 keV/u) energy. | ~10 s |
+| Notebook | What you learn | Run time* | |
+|---|---|---|---|
+| [01 — Full pipeline walkthrough](notebooks/01_full_pipeline_walkthrough.ipynb) | The whole chain on single tracks: cross sections and mean free path, one proton's track, stopping power (Monte Carlo vs analytic, vs NIST PSTAR, vs experiment), charge-state equilibrium, a Bragg curve, and how LET depends on the scale it is measured at. | ~4 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/juanmontiz/ion-track-mc/blob/main/notebooks/01_full_pipeline_walkthrough.ipynb) |
+| [02 — Beam simulation](notebooks/02_beam_simulation.ipynb) | A beam of 500 protons at 200 keV/u with a 5% energy spread: beam Bragg curve and radial dose, pencil-beam and broad-beam dose maps, energy-loss spread between protons, beam-averaged LET. | ~14 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/juanmontiz/ion-track-mc/blob/main/notebooks/02_beam_simulation.ipynb) |
+| [03 — Track visualization](notebooks/03_track_visualization.ipynb) | What a track looks like, collision by collision, at low (15 keV/u) and high (500 keV/u) energy. | ~10 s | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/juanmontiz/ion-track-mc/blob/main/notebooks/03_track_visualization.ipynb) |
 
 \*On a typical laptop. Notebook 02 is slow because it simulates every
 collision of 500 protons. To get it running quickly, lower `N_PARTICLES`

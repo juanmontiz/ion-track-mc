@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below, together with the TILDA-V paper it is based on."
+title: "ion-track-mc: an educational event-by-event Monte Carlo code for proton tracks in liquid water"
+type: software
+authors:
+  - family-names: Monti
+    given-names: Juan Manuel
+    affiliation: "Instituto de Física Rosario (CONICET-UNR) and FCEIA, Universidad Nacional de Rosario, Argentina"
+  - family-names: Quinto
+    given-names: Michele Arcangelo
+    affiliation: "Instituto de Física Rosario (CONICET-UNR), Argentina"
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/juanmontiz/ion-track-mc"
+keywords:
+  - Monte Carlo
+  - track structure
+  - proton
+  - liquid water
+  - radiobiology
+  - stopping power
+  - teaching
+references:
+  - type: article
+    title: "Monte Carlo simulation of proton track structure in biological matter"
+    authors:
+      - family-names: Quinto
+        given-names: Michele A.
+      - family-names: Monti
+        given-names: Juan M.
+      - family-names: Weck
+        given-names: Philippe F.
+      - family-names: Fojón
+        given-names: Omar A.
+      - family-names: Hanssen
+        given-names: Jocelyn
+      - family-names: Rivarola
+        given-names: Roberto D.
+      - family-names: Senot
+        given-names: Philippe
+      - family-names: Champion
+        given-names: Christophe
+    journal: "The European Physical Journal D"
+    volume: 71
+    start: 130
+    year: 2017
+    doi: 10.1140/epjd/e2017-70709-6

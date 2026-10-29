@@ -339,18 +339,21 @@ python -m ipykernel install --user --name=ion_track_mc --display-name "ion_track
 ## The notebooks
 
 Open them with `.venv/bin/jupyter lab` and choose the
-`ion_track_mc (.venv)` kernel, or in Colab with the links below. Read them
+`ion_track_mc (.venv)` kernel, or in Colab with the badges below. Read them
 **in order**. Each one saves its figures as PNG and PDF in
 `notebooks/output_01/`, `output_02/` and `output_03/`; these folders are
 recreated on every run.
 
-| Notebook | What you learn | Run time* | |
-|---|---|---|---|
-| [01 — Full pipeline walkthrough](notebooks/01_full_pipeline_walkthrough.ipynb) | The whole chain on single tracks: cross sections and mean free path, one proton's track, stopping power (Monte Carlo vs analytic, vs NIST PSTAR, vs experiment), charge-state equilibrium, a Bragg curve, and how LET depends on the scale it is measured at. | ~4 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/juanmontiz/ion-track-mc/blob/main/notebooks/01_full_pipeline_walkthrough.ipynb) |
-| [02 — Beam simulation](notebooks/02_beam_simulation.ipynb) | A beam of 500 protons at 200 keV/u with a 5% energy spread: beam Bragg curve and radial dose, pencil-beam and broad-beam dose maps, energy-loss spread between protons, beam-averaged LET. | ~14 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/juanmontiz/ion-track-mc/blob/main/notebooks/02_beam_simulation.ipynb) |
-| [03 — Track visualization](notebooks/03_track_visualization.ipynb) | What a track looks like, collision by collision, at low (15 keV/u) and high (500 keV/u) energy. | ~10 s | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/juanmontiz/ion-track-mc/blob/main/notebooks/03_track_visualization.ipynb) |
+**[01 — Full pipeline walkthrough](notebooks/01_full_pipeline_walkthrough.ipynb)** &nbsp; [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/juanmontiz/ion-track-mc/blob/main/notebooks/01_full_pipeline_walkthrough.ipynb)  
+The whole chain on single tracks: cross sections and mean free path, one proton's track, stopping power (Monte Carlo vs analytic, vs NIST PSTAR, vs experiment), charge-state equilibrium, a Bragg curve, and how LET depends on the scale it is measured at. *Run time: ~4 min.*
 
-\*On a typical laptop. Notebook 02 is slow because it simulates every
+**[02 — Beam simulation](notebooks/02_beam_simulation.ipynb)** &nbsp; [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/juanmontiz/ion-track-mc/blob/main/notebooks/02_beam_simulation.ipynb)  
+A beam of 500 protons at 200 keV/u with a 5% energy spread: beam Bragg curve and radial dose, pencil-beam and broad-beam dose maps, energy-loss spread between protons, beam-averaged LET. *Run time: ~14 min.*
+
+**[03 — Track visualization](notebooks/03_track_visualization.ipynb)** &nbsp; [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/juanmontiz/ion-track-mc/blob/main/notebooks/03_track_visualization.ipynb)  
+What a track looks like, collision by collision, at low (15 keV/u) and high (500 keV/u) energy. *Run time: ~10 s.*
+
+Run times are for a typical laptop. Notebook 02 is slow because it simulates every
 collision of 500 protons. To get it running quickly, lower `N_PARTICLES`
 in its "Beam parameters" cell; the curves will be noisier.
 

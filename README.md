@@ -33,7 +33,8 @@ an electron. Made with
 > (Universidad Nacional de Rosario). Los notebooks guiados de los trabajos
 > prácticos lo instalan solos en Google Colab y usan las utilidades de
 > [`curso/`](curso/). Para usarlo en tu computadora, ver
-> [Quick start](#quick-start). El código y su documentación están en inglés.
+> [Quick start](#quick-start). El código y su documentación están en inglés;
+> hay un [tutorial en diapositivas en español](docs/tutorial/tutorial_es.pdf).
 
 ---
 
@@ -57,6 +58,10 @@ an electron. Made with
 ---
 
 ## Quick start
+
+**New to the code?** The [tutorial slides](docs/tutorial/tutorial.pdf)
+(26 slides, ~20 min) go from the physics in brief to installing the code,
+running a first simulation and reading the results.
 
 **In the browser, nothing to install.** Open any of the three notebooks in
 Google Colab with its badge in [The notebooks](#the-notebooks). Its
@@ -395,6 +400,7 @@ function is used.
 | [`tests/`](tests/) | The test suite (pytest) |
 | [`data_comparison/stopping_power_water/`](data_comparison/stopping_power_water/) | Measured proton stopping powers in water, with references |
 | [`docs/`](docs/) | The README figures and animation, and the scripts that make them (`python docs/<script>.py` from the repository root) |
+| [`docs/tutorial/`](docs/tutorial/) | The tutorial slides (Marp sources and PDF, English and Spanish); figures from `img/make_figures.py` |
 | [`.github/workflows/`](.github/workflows/) | Continuous integration: the tests run on every push (Python 3.10–3.13) |
 | [`curso/`](curso/) | Utilities (`tp_utils.py`) used by the guided notebooks of the course practicals |
 
